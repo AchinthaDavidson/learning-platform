@@ -1,17 +1,17 @@
-# Base image (choose appropriate image for your technology stack)
+# Base image
 FROM node:16-alpine AS build-stage  
 # Working directory within the container
 WORKDIR /app
 
-# Copy application code (adjust paths as needed)
+# Copy application code 
 COPY package*.json ./  
 RUN npm install  # Install dependencies (adjust command for your technology stack)
 
-# Base image for the final container (smaller and optimized)
+# Base image for the final container
 FROM node:16-alpine
 
-# Expose port (adjust port number if needed)
+# Expose port
 EXPOSE 8071  
 
-# Start command (adjust command for your technology stack)
+# Start command 
 CMD [ "npm", "start" ]

@@ -49,6 +49,14 @@ HOW TO DEPLOY USING DOCKER AND KUBERNATES
 4.PUSH TO DOCKER HUB
     docker push ImageName and Tag
 
+4A. OR YOU CAN CLONE FROM THE HUB
+
+    docker pull xywings/ds-images-1:clientfrontend
+    docker pull xywings/ds-images-1:paymentbackend
+    docker pull xywings/ds-images-1:userbackend
+    docker pull xywings/ds-images-1:enrolmentbackend
+    docker pull xywings/ds-images-1:coursebackend
+
 5.CREATE KUBECTL DEPLOYMENT USING DEPLOYEMNT YAML'S
     kubectl apply -f cilentdeployment.yaml
     kubectl apply -f coursedeployment.yaml
@@ -70,6 +78,8 @@ HOW TO DEPLOY USING DOCKER AND KUBERNATES
         kubectl get deployment - get all the running or pending deployment
         kubectl get svc - get all the running or pending service
 
+        if all the service are running then can access using below commands
+
     Accessing
 
         minikube service ds-images-client-service
@@ -77,7 +87,3 @@ HOW TO DEPLOY USING DOCKER AND KUBERNATES
         minikube service ds-images-user-service
         minikube service ds-images-payment-service
         minikube service ds-images-enrolment-service
-
-
-
-

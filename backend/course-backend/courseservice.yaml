@@ -5,7 +5,9 @@ metadata:
 spec:
   selector:
     app: ds-images-course
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8090
       targetPort: 8090
+      nodePort: 31110

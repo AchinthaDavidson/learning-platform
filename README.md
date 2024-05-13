@@ -58,14 +58,14 @@ HOW TO DEPLOY USING DOCKER AND KUBERNATES
     docker pull xywings/ds-images-1:coursebackend
 
 5.CREATE KUBECTL DEPLOYMENT USING DEPLOYEMNT YAML'S
-    kubectl apply -f cilentdeployment.yaml
+    kubectl apply -f clientdeployment.yaml
     kubectl apply -f coursedeployment.yaml
     kubectl apply -f enrolldeployment.yaml
     kubectl apply -f paymentdeployment.yaml
     kubectl apply -f userdeployment.yaml
 
 6.CREATE KUBECTL SERVICE USING SERVICES YAML'S
-    kubectl apply -f cilentservice.yaml
+    kubectl apply -f clientservice.yaml
     kubectl apply -f courseservice.yaml
     kubectl apply -f enrollservice.yaml
     kubectl apply -f paymentservice.yaml

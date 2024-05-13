@@ -2,7 +2,8 @@
 FROM node:lts-alpine
 
 # Set the working directory
-WORKDIR /Users/imandialuthge/Desktop/SLIIT/Year 03/Semester 2/DS/Assignment/learning-platform/client
+#WORKDIR /Users/imandialuthge/Desktop/SLIIT/Year 03/Semester 2/DS/Assignment/learning-platform/client
+WORKDIR /Users/XYWINGS/Documents/LP/learning-platform/client
 
 # Copy package.json and package-lock.json
 COPY package*.json ./

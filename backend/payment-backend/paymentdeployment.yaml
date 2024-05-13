@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ds-images-user-deployment
+  name: ds-images-payment-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ds-images-user
+      app: ds-images-payment
   template:
     metadata:
       labels:
-        app: ds-images-user
+        app: ds-images-payment
     spec:
       containers:
-      - name: ds-images-user
-        image: xywings/ds-images-1:userbackend
+      - name: ds-images-payment
+        image: xywings/ds-images-1:paymentbackend
         ports:
-        - containerPort: 8080
+        - containerPort: 8070

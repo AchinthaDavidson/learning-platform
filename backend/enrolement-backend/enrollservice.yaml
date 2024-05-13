@@ -5,7 +5,9 @@ metadata:
 spec:
   selector:
     app: ds-images-enrolment
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8071
       targetPort: 8071
+      nodePort: 31112

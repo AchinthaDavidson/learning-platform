@@ -5,7 +5,9 @@ metadata:
 spec:
   selector:
     app: ds-images-payment
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8070
       targetPort: 8070
+      nodePort: 31113

@@ -6,13 +6,19 @@ FROM node:lts-alpine
 WORKDIR /Users/XYWINGS/Documents/LP/learning-platform/client
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install --frozen-lockfile
 
 # Copy the entire project
 COPY . .
 
 # Build the React app
-RUN npm run build
+RUN yarn build
+
+# Expose port 3000 to the outside world
+EXPOSE 3000
+
+# Command to run the React app
+CMD ["yarn", "dev"]

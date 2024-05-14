@@ -71,6 +71,11 @@ HOW TO DEPLOY USING DOCKER AND KUBERNATES
     kubectl apply -f paymentservice.yaml
     kubectl apply -f userservice.yaml
 
+7. START MINIKUBE and TUNNEL
+    minikube start
+    minikube status
+    minikube tunnel
+
 8.ACCESS SERVICES USING MINIKUBE
 
     Checking 
